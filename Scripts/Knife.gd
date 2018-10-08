@@ -28,7 +28,6 @@ func on_tap (pos):
 	if rect.has_point(pos) and !covered:
 		emit_signal("remove_knife")
 		#print ("off_knife")
-		covered = true
 		active = false
 		hide()
 
@@ -36,6 +35,7 @@ func on_activate():
 	if !(randi()%num):
 		if !active:
 			active = true
+			covered = true
 			emit_signal ("cover_bed")
 			texture = hide
 		#print ("on_knife")
