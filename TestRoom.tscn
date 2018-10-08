@@ -25,7 +25,6 @@
 [ext_resource path="res://Sprites/deathDark.png" type="Texture" id=23]
 [ext_resource path="res://Scripts/Death.gd" type="Script" id=24]
 
-
 [sub_resource type="NavigationPolygon" id=1]
 
 vertices = PoolVector2Array( 606, 184, 711, 186, 702, 343, 657, 373, 595, 351, 591, 520, -74, 530, -71, 382, 127, 381, 201, 385, 484, 177, 483, 65, 605, 65, 362, 382, 363, 179, 133, 351, 194, 350 )
@@ -44,7 +43,7 @@ vertices = PoolVector2Array( 675, 244, 685, 399, 502, 397, 502, 180, 614, 176, 1
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 4, 5, 8, 9 ), PoolIntArray( 4, 9, 0 ), PoolIntArray( 10, 11, 12, 4, 3 ) ]
 outlines = [ PoolVector2Array( 479, -45, 476, 170, 502, 180, 502, 397, 685, 399, 675, 244, 755, 241, 936, 244, 943, 446, 1013, 449, 1014, 172, 614, 176, 611, -45 ) ]
 
-[node name="TestRoom" type="Node2D"]
+[node name="TestRoom" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -206,6 +205,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="TopFloor" type="Sprite" parent="." index="4"]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 512, 300 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 14 )
