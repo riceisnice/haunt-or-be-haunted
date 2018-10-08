@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10.1677, 23.091 )
 
-[node name="Pot" type="Sprite" groups=[
+[node name="Pot" type="Sprite" index="0" groups=[
 "Pot",
 "Swipers",
 ]]
@@ -29,7 +29,7 @@ __meta__ = {
 
 process_mode = 1
 wait_time = 3.0
-one_shot = false
+one_shot = true
 autostart = false
 
 
