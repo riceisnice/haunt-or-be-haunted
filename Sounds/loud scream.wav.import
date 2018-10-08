@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/loud scream.wav-424d4dfc19c2ef56885fc81da6c97bb9.sample"
+
+[deps]
+
+source_file="res://Sounds/loud scream.wav"
+source_md5="9ed39761b64d7677f344b97b8542abad"
+
+dest_files=[ "res://.import/loud scream.wav-424d4dfc19c2ef56885fc81da6c97bb9.sample" ]
+dest_md5="efa2a4510786fbf2697c7548ce4b5d56"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

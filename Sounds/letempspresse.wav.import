@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/letempspresse.wav-b6529907bfffd1bf63d616659db7abb8.sample"
+
+[deps]
+
+source_file="res://Sounds/letempspresse.wav"
+source_md5="115a727b73adf62a7588df91674e9130"
+
+dest_files=[ "res://.import/letempspresse.wav-b6529907bfffd1bf63d616659db7abb8.sample" ]
+dest_md5="25afffece8e44d128df9cc91c905d9bd"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0
