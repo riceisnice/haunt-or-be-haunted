@@ -31,9 +31,9 @@ func on_tap (pos):
 
 func on_toggle():
 	emit_signal("toggle")
-	if active:
-		get_node("Basement_dark").show()
-		show()
+	#if active:
+	get_node("Basement_dark").show()
+	show()
 
 func on_activate():
 	if !(randi()%num):

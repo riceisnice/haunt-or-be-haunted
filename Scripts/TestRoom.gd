@@ -98,6 +98,7 @@ func _ready():
 	get_node("Clock/Timer").connect("timeout", self, "on_timeout")
 	connect("death", get_node("Death"), "on_death")
 	connect("death", self, "on_death")
+	on_L1()
 
 func on_B1():
 	get_node("MainFloor").hide()
@@ -200,8 +201,8 @@ func light_toggle():
 	timeDark()
 
 func timeDark():
-	if !light_on and cc.flr == cc.B1:
-		get_node("Basement/Light").get_node("Timer").start()
+	if !light_on and cc.flr == cc.B1 and get_node("Basement/Light/Timer").is_stopped():
+		get_node("Basement/Light/Timer").start()
 
 func on_death(type):
 	if !dead:
