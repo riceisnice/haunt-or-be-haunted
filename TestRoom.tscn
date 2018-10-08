@@ -1,0 +1,416 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Scripts/TestRoom.gd" type="Script" id=1]
+[ext_resource path="res://Kieran.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Basement.png" type="Texture" id=3]
+[ext_resource path="res://Light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Basement_dark.png" type="Texture" id=5]
+[ext_resource path="res://Puddle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Gas.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/MainFloor.png" type="Texture" id=8]
+[ext_resource path="res://Dishes.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Lock.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Burner.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Navigation.gd" type="Script" id=12]
+[ext_resource path="res://Cecile.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Sprites/TopFloor.png" type="Texture" id=14]
+[ext_resource path="res://Candle.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Pot.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Sprites/Unmade.png" type="Texture" id=17]
+[ext_resource path="res://Knife.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scripts/Clock.gd" type="Script" id=19]
+[ext_resource path="res://Controller.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Sounds/maison hantée.wav" type="AudioStream" id=21]
+[ext_resource path="res://Sounds/loud scream.wav" type="AudioStream" id=22]
+[ext_resource path="res://Sprites/deathDark.png" type="Texture" id=23]
+[ext_resource path="res://Scripts/Death.gd" type="Script" id=24]
+
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 606, 184, 711, 186, 702, 343, 657, 373, 595, 351, 591, 520, -74, 530, -71, 382, 127, 381, 201, 385, 484, 177, 483, 65, 605, 65, 362, 382, 363, 179, 133, 351, 194, 350 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9 ), PoolIntArray( 10, 11, 12, 0, 4 ), PoolIntArray( 13, 14, 10, 4, 5 ), PoolIntArray( 15, 16, 9, 8 ), PoolIntArray( 13, 5, 9 ) ]
+outlines = [ PoolVector2Array( 363, 179, 362, 382, 201, 385, 194, 350, 133, 351, 127, 381, -71, 382, -74, 530, 591, 520, 595, 351, 657, 373, 702, 343, 711, 186, 606, 184, 605, 65, 483, 65, 484, 177 ) ]
+
+[sub_resource type="NavigationPolygon" id=2]
+
+vertices = PoolVector2Array( 938, 547, 831, 549, 865, 229, 900, 168, 564, 178, 831, 228, 541, 236, 745, 485, 581, 464, 380, 387, 416, 238 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5 ), PoolIntArray( 6, 4, 5, 7, 8 ), PoolIntArray( 6, 8, 9, 10 ) ]
+outlines = [ PoolVector2Array( 831, 549, 938, 547, 900, 168, 564, 178, 541, 236, 416, 238, 380, 387, 581, 464, 745, 485, 831, 228, 865, 229 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+
+vertices = PoolVector2Array( 675, 244, 685, 399, 502, 397, 502, 180, 614, 176, 1014, 172, 1013, 449, 943, 446, 936, 244, 755, 241, 476, 170, 479, -45, 611, -45 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 4, 5, 8, 9 ), PoolIntArray( 4, 9, 0 ), PoolIntArray( 10, 11, 12, 4, 3 ) ]
+outlines = [ PoolVector2Array( 479, -45, 476, 170, 502, 180, 502, 397, 685, 399, 675, 244, 755, 241, 936, 244, 943, 446, 1013, 449, 1014, 172, 614, 176, 611, -45 ) ]
+
+[node name="TestRoom" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Kieran" parent="." index="0" instance=ExtResource( 2 )]
+
+wait_time = 3.0
+level = 3
+
+[node name="Basement" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 512, 300 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light" parent="Basement" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 24.0366, -23.9595 )
+scale = Vector2( 0.173611, 0.185872 )
+
+[node name="Basement_dark" type="Sprite" parent="Basement/Light" index="1"]
+
+position = Vector2( -138.451, 128.903 )
+scale = Vector2( 5.76002, 5.38004 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Puddle" parent="Basement" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 45.4248, 11.5552 )
+
+[node name="Gas" parent="Basement" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( -16.2368, -25.0009 )
+rotation = 1.5708
+
+[node name="Gas2" parent="Basement" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -21.9234, -1.7226 )
+rotation = 1.5708
+
+[node name="Gas3" parent="Basement" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -13.2605, 18.1641 )
+
+[node name="MainFloor" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 512, 300 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dishes" parent="MainFloor" index="0" instance=ExtResource( 9 )]
+
+position = Vector2( 48.7682, 12.7039 )
+
+[node name="Dishes4" parent="MainFloor" index="1" instance=ExtResource( 9 )]
+
+position = Vector2( 33.0359, 4.80183 )
+
+[node name="Dishes5" parent="MainFloor" index="2" instance=ExtResource( 9 )]
+
+position = Vector2( 22.1779, 13.2276 )
+
+[node name="Lock" parent="MainFloor" index="3" instance=ExtResource( 10 )]
+
+position = Vector2( -43.5097, 0.780907 )
+
+[node name="Burner" parent="MainFloor" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 39.2243, -17.2069 )
+
+[node name="Navigation" type="Navigation2D" parent="." index="3"]
+
+editor/display_folded = true
+script = ExtResource( 12 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="MainPolygon" type="NavigationPolygonInstance" parent="Navigation" index="0"]
+
+editor/display_folded = true
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="Upstairs" type="Node2D" parent="Navigation/MainPolygon" index="0"]
+
+position = Vector2( 542, 98 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bath" type="Node2D" parent="Navigation/MainPolygon" index="1"]
+
+position = Vector2( 166, 362 )
+
+[node name="Table" type="Node2D" parent="Navigation/MainPolygon" index="2"]
+
+position = Vector2( 675, 359 )
+
+[node name="Downstairs" type="Node2D" parent="Navigation/MainPolygon" index="3"]
+
+position = Vector2( -33, 457 )
+
+[node name="Main" type="Node2D" parent="Navigation/MainPolygon" index="4"]
+
+position = Vector2( 463, 359 )
+
+[node name="BasePolygon" type="NavigationPolygonInstance" parent="Navigation" index="1"]
+
+editor/display_folded = true
+navpoly = SubResource( 2 )
+enabled = false
+
+[node name="Downstairs" type="Node2D" parent="Navigation/BasePolygon" index="0"]
+
+position = Vector2( 883, 510 )
+
+[node name="Base" type="Node2D" parent="Navigation/BasePolygon" index="1"]
+
+position = Vector2( 459, 352 )
+
+[node name="TopPolygon" type="NavigationPolygonInstance" parent="Navigation" index="2"]
+
+editor/display_folded = true
+navpoly = SubResource( 3 )
+enabled = false
+
+[node name="Bed" type="Node2D" parent="Navigation/TopPolygon" index="0"]
+
+position = Vector2( 970, 407 )
+
+[node name="Bedroom" type="Node2D" parent="Navigation/TopPolygon" index="1"]
+
+position = Vector2( 824, 218 )
+
+[node name="Top" type="Node2D" parent="Navigation/TopPolygon" index="2"]
+
+position = Vector2( 583, 335 )
+
+[node name="Downstairs" type="Node2D" parent="Navigation/TopPolygon" index="3"]
+
+position = Vector2( 542, 98 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Cecile" parent="Navigation" index="3" instance=ExtResource( 13 )]
+
+position = Vector2( 462, 340 )
+scale = Vector2( 8, 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TopFloor" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 512, 300 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Candle" parent="TopFloor" index="0" instance=ExtResource( 15 )]
+
+position = Vector2( -55.5576, -29.2215 )
+
+[node name="Candle2" parent="TopFloor" index="1" instance=ExtResource( 15 )]
+
+position = Vector2( -38.8846, -29.8439 )
+
+[node name="Candle3" parent="TopFloor" index="2" instance=ExtResource( 15 )]
+
+position = Vector2( -21.958, -30.6835 )
+
+[node name="Pot2" parent="TopFloor" index="3" instance=ExtResource( 16 )]
+
+position = Vector2( -35.6375, -15.0903 )
+
+[node name="Unmade" type="Sprite" parent="TopFloor" index="4"]
+
+visible = false
+position = Vector2( 40.5, 16 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Knife" parent="TopFloor" index="5" instance=ExtResource( 18 )]
+
+position = Vector2( 44.625, 14.875 )
+
+[node name="Clock" type="Node2D" parent="." index="5"]
+
+position = Vector2( 899.334, 546.647 )
+scale = Vector2( 4.11247, 3.03551 )
+script = ExtResource( 19 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Label" type="Label" parent="Clock" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -16.0
+margin_top = -1.0
+margin_right = 12.0
+margin_bottom = 13.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "3:00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="Clock" index="1"]
+
+process_mode = 1
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="B1" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 248.0
+margin_top = 521.0
+margin_right = 348.0
+margin_bottom = 583.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "B1"
+flat = false
+align = 1
+
+[node name="L1" type="Button" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 464.0
+margin_top = 519.0
+margin_right = 564.0
+margin_bottom = 581.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "L1"
+flat = false
+align = 1
+
+[node name="L2" type="Button" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 682.0
+margin_top = 520.0
+margin_right = 782.0
+margin_bottom = 582.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "L2"
+flat = false
+align = 1
+
+[node name="Controller" parent="." index="9" instance=ExtResource( 20 )]
+
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." index="10"]
+
+position = Vector2( 545, 330 )
+stream = ExtResource( 21 )
+volume_db = -8.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="." index="11"]
+
+position = Vector2( 526, 314 )
+stream = ExtResource( 22 )
+volume_db = -10.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Death" type="Sprite" parent="." index="12"]
+
+visible = false
+position = Vector2( 512, 300 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 23 )
+script = ExtResource( 24 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="HomeButton" type="Button" parent="." index="13"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 841.0
+margin_top = 537.0
+margin_right = 1004.0
+margin_bottom = 584.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Return to the Beginning"
+flat = false
+align = 1
+
+
