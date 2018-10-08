@@ -10,7 +10,7 @@ source_file="res://Sprites/deathBath.png"
 source_md5="f4bca9261b5e3d60335c86a5ff625d20"
 
 dest_files=[ "res://.import/deathBath.png-d5a287c9de05d3c7706e641e2a74a2ce.stex" ]
-dest_md5="921de8101ac0a228748feb8e0313f208"
+dest_md5="aba2d27c4ac010cefb476556f58ed172"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

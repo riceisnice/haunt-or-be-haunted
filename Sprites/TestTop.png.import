@@ -10,7 +10,7 @@ source_file="res://Sprites/TestTop.png"
 source_md5="06257620fa22245328ae4e040141416d"
 
 dest_files=[ "res://.import/TestTop.png-44b14c07328c658c649f835c4ca26a8e.stex" ]
-dest_md5="f95d3a2f9438639c4b1c47b4a46fba16"
+dest_md5="6e627e26aa7d1c7dccc38329dfc5895f"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -9,8 +9,8 @@ custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
 [node name="Light" type="Sprite" groups=[
-"Tappers",
 "Light",
+"Tappers",
 ]]
 
 texture = ExtResource( 1 )
@@ -28,7 +28,7 @@ __meta__ = {
 
 process_mode = 1
 wait_time = 4.0
-one_shot = false
+one_shot = true
 autostart = false
 
 

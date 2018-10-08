@@ -10,7 +10,7 @@ source_file="res://Sprites/TestRoom.png"
 source_md5="67acf70581625868d565fd42e7372825"
 
 dest_files=[ "res://.import/TestRoom.png-12e2b8cdb58f6e1103b6828a9b214eda.stex" ]
-dest_md5="261e2478eb38eb256bd9cd31ee189a5f"
+dest_md5="dc24e25cec838842aff9a23eabd25864"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

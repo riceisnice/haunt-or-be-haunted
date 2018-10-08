@@ -10,7 +10,7 @@ source_file="res://Sprites/deathFire.png"
 source_md5="51142880ef9ca74078dc40f75504b4c6"
 
 dest_files=[ "res://.import/deathFire.png-d2b324558ef8390a366c92d0f44effa9.stex" ]
-dest_md5="02f1f51adb22f385d7abfa4108b03449"
+dest_md5="a2119705c40f801d8df9476d5a9389f3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

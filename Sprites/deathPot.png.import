@@ -10,7 +10,7 @@ source_file="res://Sprites/deathPot.png"
 source_md5="e146c3795b5f0bce8a31e62097bee654"
 
 dest_files=[ "res://.import/deathPot.png-e5b4181f0cb03d7773113f1a43f09ce0.stex" ]
-dest_md5="91025825b106ab76e01fec3632b7d21d"
+dest_md5="1ab2c3f9814c24b8a9e3f8d9c49fab7d"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -10,7 +10,7 @@ source_file="res://Sprites/deathDish.png"
 source_md5="e8ed84b5be0d42ac81a8ec2ec2566d08"
 
 dest_files=[ "res://.import/deathDish.png-65595dffda91915ff079f787f23e757f.stex" ]
-dest_md5="a14f7f7e800f0dfb68564db72e00fba3"
+dest_md5="132db6e004684f149655b91c55c81c61"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -10,7 +10,7 @@ source_file="res://Sprites/deathDark.png"
 source_md5="6c616a57943d4f858f993b3478927c8c"
 
 dest_files=[ "res://.import/deathDark.png-54374e62e6c2c083b0f62112926fc61c.stex" ]
-dest_md5="821b19385a0f4984293a9fc953d76812"
+dest_md5="1383eed519bf5feeab5e67128a04334b"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

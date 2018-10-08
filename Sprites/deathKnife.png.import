@@ -10,7 +10,7 @@ source_file="res://Sprites/deathKnife.png"
 source_md5="254e307f7fe699c57eb69bc47be45c20"
 
 dest_files=[ "res://.import/deathKnife.png-c3cbbb4268d26f8684b2ca907bb6accf.stex" ]
-dest_md5="36ca620fc1e943ac37e9f33d55fc9852"
+dest_md5="7bec7d7049ee2925fbf9de569b3e9695"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
