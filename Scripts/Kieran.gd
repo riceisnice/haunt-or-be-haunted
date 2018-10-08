@@ -22,7 +22,7 @@ func _ready():
 
 func on_timeout():
 	r = randi()%(level * 3)
-	#r = KNIFE
+	#r = POT
 	#print (r)
 	match r:
 		DISHES:

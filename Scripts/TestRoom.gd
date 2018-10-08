@@ -78,7 +78,7 @@ func _ready():
 		enemy.connect("pot", d, "on_activate")
 		d.hide()
 	for d in puddle:
-		enemy.connect("pot", d, "on_activate")
+		enemy.connect("puddle", d, "on_activate")
 		d.hide()
 	for d in gas:
 		enemy.connect("gas", d, "on_activate")
@@ -145,8 +145,9 @@ func on_uncover():
 	get_node("TopFloor/Unmade").show()
 
 func on_timeout():
-	print ("you win!")
-	get_tree().change_scene("res://ChaseScene.tscn")
+	if !dead:
+		print ("you win!")
+		get_tree().change_scene("res://ChaseScene.tscn")
 
 func on_moved(pos):
 	for p in puddle:
@@ -178,7 +179,7 @@ func on_waited(place, next):
 					emit_signal("death", "bath")
 		cc.MAIN:
 			for p in pot:
-				if p.is_visible_in_tree() and p.ready:
+				if p.ready:
 					print("brained with falling pot")
 					emit_signal("death", "pot")
 
